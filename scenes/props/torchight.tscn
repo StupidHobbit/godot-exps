@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://cq6mskp1j1gwn"]
+
+[ext_resource type="PackedScene" uid="uid://dbdru5jssb1o5" path="res://scenes/vfx/fire.tscn" id="1_ajr00"]
+
+[sub_resource type="Gradient" id="Gradient_g8bpe"]
+colors = PackedColorArray(0, 0, 0, 1, 0.529412, 0.309804, 0.137255, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_nyvr7"]
+frequency = 0.0493
+fractal_octaves = 1
+fractal_lacunarity = 5.73
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0375w"]
+color_ramp = SubResource("Gradient_g8bpe")
+noise = SubResource("FastNoiseLite_nyvr7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5y07o"]
+albedo_texture = SubResource("NoiseTexture2D_0375w")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_olr7r"]
+material = SubResource("StandardMaterial3D_5y07o")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26wpo"]
+albedo_color = Color(0.227451, 0.227451, 0.227451, 1)
+metallic = 0.65
+
+[sub_resource type="BoxMesh" id="BoxMesh_yfp76"]
+material = SubResource("StandardMaterial3D_26wpo")
+size = Vector3(0.105, 0.06, 0.22)
+
+[node name="Torchight" type="Node3D"]
+
+[node name="mesh" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="mesh"]
+mesh = SubResource("CylinderMesh_olr7r")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.141703, -0.0580947)
+mesh = SubResource("BoxMesh_yfp76")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="Fire" parent="." instance=ExtResource("1_ajr00")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.249833, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234127, 0)
+light_color = Color(1, 0.517647, 0.0784314, 1)
+light_energy = 0.525
+light_size = 0.37

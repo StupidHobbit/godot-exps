@@ -1,0 +1,28 @@
+{
+    "tool": {
+        "block": {
+            "default_block_height": 1
+        },
+        "cylinder": {
+            "segments": 16,
+            "tube": true
+        },
+        "material_brush": {
+            "color": "(0, 0, 0, 1)",
+            "erase_material": false,
+            "individual_faces": false,
+            "paint_color": false,
+            "paint_materials": true,
+            "paint_visibility": false,
+            "visibility": false
+        },
+        "prism": {
+            "default_block_height": 1
+        },
+        "stairs": {
+            "direction": 1,
+            "step_depth": 0.25,
+            "step_height": 0.125
+        }
+    }
+}
