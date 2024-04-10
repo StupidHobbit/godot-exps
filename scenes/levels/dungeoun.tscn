@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://civj6xhn0wakx"]
+[gd_scene load_steps=41 format=3 uid="uid://civj6xhn0wakx"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_y8xe8"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/convex_block_data.gd" id="2_p6re8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://brt7dejwum100" path="res://resources/materials/brick1.tres" id="4_1i5r2"]
 [ext_resource type="PackedScene" uid="uid://d5360lvtbvie" path="res://scenes/character/character.tscn" id="5_tu7n8"]
 [ext_resource type="PackedScene" uid="uid://cq6mskp1j1gwn" path="res://scenes/props/torchight.tscn" id="6_247pb"]
+[ext_resource type="PackedScene" uid="uid://dytlysfw65w83" path="res://scenes/creatures/skeleton.tscn" id="7_kesar"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3yr4v"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -946,3 +947,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.4003
 
 [node name="Torchight4" parent="." instance=ExtResource("6_247pb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.52411, 2.17603, -9.15867)
+
+[node name="skeleton2" parent="." instance=ExtResource("7_kesar")]
+transform = Transform3D(0.74862, 0, -0.662999, 0, 1, 0, 0.662999, 0, 0.74862, 6.3512, 1.01673, -14.474)

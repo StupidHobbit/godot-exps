@@ -53,7 +53,7 @@ func _physics_process(delta: float):
 		return
 	apply_vertical_movement(delta)
 	apply_rotation()
-	apply_crouching(delta)
+	#apply_crouching(delta)
 	apply_horizontal_movement(delta)
 	apply_dash(delta)
 	move_and_slide()
