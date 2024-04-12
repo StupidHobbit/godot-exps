@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://civj6xhn0wakx"]
+[gd_scene load_steps=43 format=3 uid="uid://civj6xhn0wakx"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="1_y8xe8"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/convex_block_data.gd" id="2_p6re8"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://d5360lvtbvie" path="res://scenes/character/character.tscn" id="5_tu7n8"]
 [ext_resource type="PackedScene" uid="uid://cq6mskp1j1gwn" path="res://scenes/props/torchight.tscn" id="6_247pb"]
 [ext_resource type="PackedScene" uid="uid://dytlysfw65w83" path="res://scenes/creatures/skeleton.tscn" id="7_kesar"]
+[ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="8_o18h7"]
+[ext_resource type="Resource" uid="uid://byh4ur3e64ju2" path="res://dialogue/main.dialogue" id="9_2r0nn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3yr4v"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -950,3 +952,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.5241
 
 [node name="skeleton2" parent="." instance=ExtResource("7_kesar")]
 transform = Transform3D(0.74862, 0, -0.662999, 0, 1, 0, 0.662999, 0, 0.74862, 6.3512, 1.01673, -14.474)
+script = ExtResource("8_o18h7")
+title = "Sceleton"
+dialogue = ExtResource("9_2r0nn")

@@ -174,3 +174,5 @@ func _input(event: InputEvent):
 			
 		turn += event.relative
 	turn.y = clampf(turn.y, -viewport_size.y / 2, viewport_size.y / 2)
+	
+	

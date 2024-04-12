@@ -38,6 +38,7 @@ _data = {
 
 [node name="Character" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14577e-05, 0.72062, -0.00247538)
+collision_layer = 3
 script = ExtResource("1_611ae")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_2wxrl")]

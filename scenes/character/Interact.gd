@@ -13,6 +13,8 @@ func get_interactable() -> Interactable:
 		return null
 	if global_position.distance_to(get_collision_point()) > max_interaction_distance:
 		return null
+	if collider.has_method("get_label"):
+		return collider
 	collider = collider.get_parent()
 	if not collider.has_method("get_label"):
 		collider = collider.get_parent()
