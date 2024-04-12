@@ -953,5 +953,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.5241
 [node name="skeleton2" parent="." instance=ExtResource("7_kesar")]
 transform = Transform3D(0.74862, 0, -0.662999, 0, 1, 0, 0.662999, 0, 0.74862, 6.3512, 1.01673, -14.474)
 script = ExtResource("8_o18h7")
-title = "Sceleton"
+title = "Skeleton"
 dialogue = ExtResource("9_2r0nn")
+dialogue_path = "res://dialogue/main.dialogue"
